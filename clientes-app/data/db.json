@@ -149,6 +149,18 @@
       "nome": "João da Silva",
       "cpf": "4121121111",
       "id": 25
+    },
+    {
+      "dataCadastro": "3/11/2024",
+      "nome": "Pedro Henrique",
+      "cpf": "7454412111",
+      "id": 26
+    },
+    {
+      "dataCadastro": "3/11/2024",
+      "nome": "Carlos Augusto",
+      "cpf": "45412412222",
+      "id": 27
     }
   ]
 }
