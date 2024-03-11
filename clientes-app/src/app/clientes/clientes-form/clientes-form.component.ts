@@ -66,7 +66,12 @@ export class ClientesFormComponent implements OnInit {
         .subscribe(response => {
           this.success = true;
           this.cliente = response;
-        });
+        },errorResponse =>
+        {
+          this.success = false;
+          this.error = true;
+        }
+        );
       this.error = false;
     }
   }
@@ -77,8 +82,16 @@ export class ClientesFormComponent implements OnInit {
       this.error = true;
       return;
     } else {
-      //Método de edição
-      this.error = false;
+      this.service.atualizar(this.cliente)
+      .subscribe(response =>{
+        this.success = true;
+        this.error = false;
+
+      }, errorResponse =>{
+        this.success = false;
+        this.error = true;
+      })
+    
     }
   }
 }
