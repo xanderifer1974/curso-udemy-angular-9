@@ -131,6 +131,12 @@
       "nome": "Alexandre Ribeiro",
       "cpf": "0412111122",
       "id": 22
+    },
+    {
+      "dataCadastro": "3/11/2024",
+      "nome": "Antonio Marcos ",
+      "cpf": "7457452141",
+      "id": 23
     }
   ]
 }
