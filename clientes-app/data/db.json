@@ -115,58 +115,17 @@
       "dataCadastro": "2024-03-07"
     },
     {
-      "id": 20,
-      "nomeveiculo": "Eduardo Santos",
-      "cpf": "987.654.321-00",
-      "dataCadastro": "2024-03-07"
-    },
-    {
-      "dataCadastro": "3/8/2024",
-      "nome": "Fulano de Tal",
-      "cpf": "41212141241",
-      "id": 21
-    },
-    {
-      "dataCadastro": "3/8/2024",
+      "dataCadastro": "2024-03-11",
       "nome": "Alexandre Ribeiro",
       "cpf": "0412111122",
-      "id": 22
+      "id": 20
     },
     {
-      "dataCadastro": "3/11/2024",
+      "dataCadastro": "2024-03-11",
+      "dataFormatadaPtBr": "11/03/2024",
       "nome": "Antonio Marcos ",
-      "cpf": "7457452141",
-      "id": 23
-    },
-    {
-      "dataCadastro": "3/11/2024",
-      "nome": "as",
-      "cpf": "0412111122",
-      "id": 24
-    },
-    {
-      "dataCadastro": "3/11/2024",
-      "nome": "João da Silva",
-      "cpf": "4121121111",
-      "id": 25
-    },
-    {
-      "dataCadastro": "3/11/2024",
-      "nome": "Pedro Henrique",
       "cpf": "7454412111",
-      "id": 26
-    },
-    {
-      "dataCadastro": "3/11/2024",
-      "nome": "Carlos Augusto",
-      "cpf": "45412412222",
-      "id": 27
-    },
-    {
-      "dataCadastro": "3/11/2024",
-      "nome": "Augusto Fernandes",
-      "cpf": "4422222222",
-      "id": 28
+      "id": 21
     }
   ]
 }

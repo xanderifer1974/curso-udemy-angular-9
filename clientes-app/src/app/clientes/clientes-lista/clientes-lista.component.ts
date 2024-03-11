@@ -16,7 +16,21 @@ export class ClientesListaComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.getClientes()
-    .subscribe(clientes => this.clientes = clientes);
+    .subscribe(clientes => {
+      // Percorre o array de clientes e formata o campo dataCadastro
+      clientes.forEach(cliente => {
+        const dataParts = cliente.dataCadastro.split('-');
+        const dataFormatada = `${dataParts[2]}/${dataParts[1]}/${dataParts[0]}`;
+        cliente.dataCadastro = dataFormatada;
+      });
+
+      // Atribui os clientes formatados à propriedade clientes
+      this.clientes = clientes;
+    });
   }
+
+  
+
+  
 
 }
