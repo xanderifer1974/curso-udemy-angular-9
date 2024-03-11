@@ -146,6 +146,13 @@
       "nome": "Antonio Marcos ",
       "cpf": "7454412111",
       "id": 21
+    },
+    {
+      "dataCadastro": "2024-03-11",
+      "dataFormatadaPtBr": "11/03/2024",
+      "nome": "Patrick Away",
+      "cpf": "1241241214411",
+      "id": 22
     }
   ]
 }

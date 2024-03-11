@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {Router, ActivatedRoute} from '@angular/router'
+import { Router, ActivatedRoute } from '@angular/router'
 
-import {Cliente} from '../cliente'
+import { Cliente } from '../cliente'
 
-import {ClientesService} from '../../clientes.service';
+import { ClientesService } from '../../clientes.service';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -20,58 +20,65 @@ export class ClientesFormComponent implements OnInit {
 
   constructor(
     private service: ClientesService,
-    private router:Router,
-    private activatedRouter:ActivatedRoute
-    ) {
-   this.cliente = new Cliente();   
-   }
-
-  ngOnInit(): void {
-    let params = this.activatedRouter.params.subscribe(params =>{
-      if(params && params['id']){
-        this.id = params['id'];
-        this.service.getClienteById(this.id)
-        .subscribe(response =>{
-          this.cliente = response,
-          erroResponse =>{
-            this.cliente = new Cliente()
-          }
-        })
-      }
-    })
-   
+    private router: Router,
+    private activatedRouter: ActivatedRoute
+  ) {
+    this.cliente = new Cliente();
   }
 
-  onSubmit(form: NgForm){
+  ngOnInit(): void {
+    let params = this.activatedRouter.params.subscribe(params => {
+      if (params && params['id']) {
+        this.id = params['id'];
+        this.service.getClienteById(this.id)
+          .subscribe(response => {
+            this.cliente = response,
+              erroResponse => {
+                this.cliente = new Cliente()
+              }
+          })
+      }
+    })
+
+  }
+
+  onSubmit(form: NgForm) {
+
+    if (this.id) {
+      this.EditarCliente(form)
+
+    } else {
+      this.SalvarCliente(form);
+    }
+  }
+
+  voltarParaListagem() {
+    return this.router.navigate(['/clientes-lista']);
+  }
+
+  SalvarCliente(form: NgForm) {
     if (form.invalid) {
       this.success = false;
       this.error = true;
       return;
-    }else{
+    } else {
       this.service.salvar(this.cliente)
-      .subscribe(response =>{
-      this.success = true;
-      this.cliente = response;
-      });
-      this.error=false;
-    } 
-    /*
-    Neste exemplo, estamos fazendo uma validação simples pois estamos utilizando o json-server. Porém no caso do erro
-    vindo de api, faremos da seguinte formar
-
-    this.service.salvar(this.cliente)
-      .subscribe(response =>{
-      this.success = true;
-      }, errorResponse =>{
-
-        //Aqui nos capturamos os erros vindos da API, podendo ser através de um array de erros e exibindo os mesmso
-        no front-end
-      });
-    */
+        .subscribe(response => {
+          this.success = true;
+          this.cliente = response;
+        });
+      this.error = false;
+    }
   }
 
-  voltarParaListagem(){
-    return this.router.navigate(['/clientes-lista']);
+  EditarCliente(form: NgForm) {
+    if (form.invalid) {
+      this.success = false;
+      this.error = true;
+      return;
+    } else {
+      //Método de edição
+      this.error = false;
+    }
   }
-
 }
