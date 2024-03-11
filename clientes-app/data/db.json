@@ -1,5 +1,5 @@
 {
-  "Clientes": [
+  "clientes": [
     {
       "id": 1,
       "nome": "Fulano da Silva",
@@ -137,6 +137,18 @@
       "nome": "Antonio Marcos ",
       "cpf": "7457452141",
       "id": 23
+    },
+    {
+      "dataCadastro": "3/11/2024",
+      "nome": "as",
+      "cpf": "0412111122",
+      "id": 24
+    },
+    {
+      "dataCadastro": "3/11/2024",
+      "nome": "João da Silva",
+      "cpf": "4121121111",
+      "id": 25
     }
   ]
 }

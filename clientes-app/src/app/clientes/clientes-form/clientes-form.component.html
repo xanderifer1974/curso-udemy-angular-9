@@ -4,12 +4,15 @@
 </ol>
 
 <div class="container">
-    <form #clienteForm="ngForm" (ngSubmit)="onSubmit()">
+    <form #clienteForm="ngForm" (ngSubmit)="onSubmit(clienteForm)">
         <div class="row">
             <div class="col-md-12">
-                <div class="alert alert-success" role="alert" *ngIf="success==true">
+                <div class="alert alert-success" role="alert" *ngIf="success==true&&error==false">
                     Cliente Salvo/Atualizado com sucesso!
-                  </div>
+                </div>
+                <div class="alert alert-danger" role="alert" *ngIf="success==false&&error==true">
+                    Por favor, preencha todos os campos obrigatórios.
+                </div>
             </div>
         </div>
         <div class="row">
@@ -33,14 +36,15 @@
                 <div class="form-group">
                     <label>Nome: *</label>
                     <input type="text" class="form-control" 
-                    [(ngModel)]="cliente.nome"  name="nome"/>
+                    [(ngModel)]="cliente.nome"  name="nome"
+                    required/>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label>CPF: *</label>
                     <input type="text" class="form-control"
-                    [(ngModel)]="cliente.cpf"  name="cpf"  />
+                    [(ngModel)]="cliente.cpf"  name="cpf" required />
                 </div>
             </div>
         </div>
