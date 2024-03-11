@@ -17,12 +17,8 @@ export class ClientesService {
 
   }
 
-  getCliente(): Cliente{
-    let  cliente: Cliente = new Cliente()
-    cliente.nome = "Fulano de Tal";
-    cliente.cpf = "41212141241";
-
-    return cliente;
-
+  getClientes(): Observable<Cliente[]>{
+    return  this.http.get<Cliente[]>(this.Url);
   }
+  
 }

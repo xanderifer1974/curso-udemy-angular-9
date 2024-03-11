@@ -161,6 +161,12 @@
       "nome": "Carlos Augusto",
       "cpf": "45412412222",
       "id": 27
+    },
+    {
+      "dataCadastro": "3/11/2024",
+      "nome": "Augusto Fernandes",
+      "cpf": "4422222222",
+      "id": 28
     }
   ]
 }
