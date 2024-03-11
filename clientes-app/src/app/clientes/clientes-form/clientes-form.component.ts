@@ -28,8 +28,8 @@ export class ClientesFormComponent implements OnInit {
 
   ngOnInit(): void {
     let params = this.activatedRouter.params.subscribe(params => {
-      if (params && params['id']) {
-        this.id = params['id'];
+      this.id = params['id'];
+      if (this.id) {       
         this.service.getClienteById(this.id)
           .subscribe(response => {
             this.cliente = response,
