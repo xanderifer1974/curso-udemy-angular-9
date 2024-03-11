@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router'
 
 import {Cliente} from '../cliente'
 
@@ -16,7 +17,10 @@ export class ClientesFormComponent implements OnInit {
   success: boolean = false;
   error: boolean = false;
 
-  constructor(private service: ClientesService) {
+  constructor(
+    private service: ClientesService,
+    private router:Router
+    ) {
    this.cliente = new Cliente();   
    }
 
@@ -49,6 +53,10 @@ export class ClientesFormComponent implements OnInit {
         no front-end
       });
     */
+  }
+
+  voltarParaListagem(){
+    return this.router.navigate(['/clientes-lista']);
   }
 
 }
