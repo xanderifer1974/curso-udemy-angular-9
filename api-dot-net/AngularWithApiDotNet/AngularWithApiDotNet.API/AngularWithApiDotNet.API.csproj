@@ -10,4 +10,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AngularWithApiDotNet.Core\AngularWithApiDotNet.Core.csproj" />
+    <ProjectReference Include="..\AngularWithApiDotNet.Data\AngularWithApiDotNet.Data.csproj" />
+    <ProjectReference Include="..\AngularWithApiDotNet.Model\AngularWithApiDotNet.Model.csproj" />
+  </ItemGroup>
+
 </Project>

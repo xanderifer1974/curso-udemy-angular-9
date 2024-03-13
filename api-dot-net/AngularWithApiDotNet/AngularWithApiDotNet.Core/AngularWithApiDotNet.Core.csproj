@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Util\" />
+    <Folder Include="Services\Interfaces\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AngularWithApiDotNet.Data\AngularWithApiDotNet.Data.csproj" />
+    <ProjectReference Include="..\AngularWithApiDotNet.Model\AngularWithApiDotNet.Model.csproj" />
+  </ItemGroup>
+
 </Project>
