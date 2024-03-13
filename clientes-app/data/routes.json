@@ -1,0 +1,7 @@
+{
+  "/servicosPrestados": {
+    "GET": {
+      "_embed": ["_cliente"]
+    }
+  }
+}

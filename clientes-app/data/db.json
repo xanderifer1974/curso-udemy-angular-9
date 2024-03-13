@@ -140,5 +140,35 @@
       "cpf": "7454412111",
       "id": 21
     }
+  ],
+  "servicosPrestados": [
+    {
+      "id": 1,
+      "descricao": "Manutenção veicular",
+      "clienteId": 1,
+      "valor": 200.00,
+      "data": "2024-03-13",
+      "cliente": {
+        "id": 1,
+        "nome": "Fulano da Silva",
+        "cpf": "123.456.789-00",
+        "dataCadastro": "2024-03-07",
+        "dataFormatadaPtBr": "07/03/2024"
+      }
+    },
+    {
+      "id": 2,
+      "descricao": "Troca de pneu",
+      "clienteId": 1,
+      "valor": 100.00,
+      "data": "2024-03-13",
+      "cliente": {
+        "id": 1,
+        "nome": "Fulano da Silva",
+        "cpf": "123.456.789-00",
+        "dataCadastro": "2024-03-07",
+        "dataFormatadaPtBr": "07/03/2024"
+      }
+    }
   ]
 }
